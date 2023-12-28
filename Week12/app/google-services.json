@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "186343702865",
+    "project_id": "week12-cf692",
+    "storage_bucket": "week12-cf692.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186343702865:android:5986cb4d41d3dbd9831370",
+        "android_client_info": {
+          "package_name": "com.serkanyilmaz.week12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDACoHIekJ901OLBXBwAKgtWM6WbNFuUvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
