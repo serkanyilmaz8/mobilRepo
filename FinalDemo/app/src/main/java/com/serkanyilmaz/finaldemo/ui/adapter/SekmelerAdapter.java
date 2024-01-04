@@ -1,15 +1,21 @@
 package com.serkanyilmaz.finaldemo.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.serkanyilmaz.finaldemo.R;
 import com.serkanyilmaz.finaldemo.data.entity.Sekmeler;
 import com.serkanyilmaz.finaldemo.data.entity.Urunler;
+import com.serkanyilmaz.finaldemo.databinding.FragmentPlacesAnasayfaBinding;
+import com.serkanyilmaz.finaldemo.databinding.FragmentRommateAnasayfaBinding;
+import com.serkanyilmaz.finaldemo.databinding.FragmentShoppingAnasayfaBinding;
 import com.serkanyilmaz.finaldemo.databinding.SekmelerCardTasarimBinding;
 import com.serkanyilmaz.finaldemo.databinding.ShoppingCardTasarimBinding;
 import com.serkanyilmaz.finaldemo.ui.fragment.AnasayfaFragmentDirections;
@@ -48,22 +54,24 @@ public class SekmelerAdapter extends RecyclerView.Adapter<SekmelerAdapter.sekmel
         Sekmeler sekme = sekmelerList.get(position);
         SekmelerCardTasarimBinding t = holder.tasarim;
 
-        t.imageViewSekme.setImageResource(
+       t.imageViewSekme.setImageResource(
                 mContext.getResources()
                         .getIdentifier(sekme.getSekmeResim(), "drawable", mContext.getPackageName()));
         t.textViewSekmeAd.setText(sekme.getSekmeAd());
         t.cardViewSekme.setOnClickListener(view -> {
-            if(position == 1){
-                AnasayfaFragmentDirections.AnasayfaShoppingAnasayfaGecis gecis = AnasayfaFragmentDirections.anasayfaShoppingAnasayfaGecis(sekme);
-                Navigation.findNavController(view).navigate(gecis);
-            } else if (position == 2) {
-                AnasayfaFragmentDirections.AnasayfaRommateAnasayfaGecis gecis = AnasayfaFragmentDirections.anasayfaRommateAnasayfaGecis(sekme);
-                Navigation.findNavController(view).navigate(gecis);
-            }else{
-                AnasayfaFragmentDirections.AnasayfaPlacesAnasayfaGecis gecis = AnasayfaFragmentDirections.anasayfaPlacesAnasayfaGecis(sekme);
-                Navigation.findNavController(view).navigate(gecis);
+            if (position == 0) {
+                // Anasayfa'dan Shopping Fragment'a geçiş
+                Navigation.findNavController(view).navigate(R.id.anasayfaShoppingAnasayfaGecis);
+            } else if (position == 1) {
+                // Anasayfa'dan Rommate Fragment'a geçiş
+                Navigation.findNavController(view).navigate(R.id.anasayfaRommateAnasayfaGecis);
+            } else {
+                // Anasayfa'dan Places Fragment'a geçiş
+                Navigation.findNavController(view).navigate(R.id.anasayfaPlacesAnasayfaGecis);
             }
         });
+
+
     }
 
     @Override

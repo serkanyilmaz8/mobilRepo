@@ -23,11 +23,7 @@
         android:id="@+id/placesAnasayfaFragment"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.PlacesAnasayfaFragment"
         android:label="fragment_places_anasayfa"
-        tools:layout="@layout/fragment_places_anasayfa" >
-        <argument
-            android:name="Sekme"
-            app:argType="com.serkanyilmaz.finaldemo.data.entity.Sekmeler" />
-    </fragment>
+        tools:layout="@layout/fragment_places_anasayfa" />
     <fragment
         android:id="@+id/shoppingAnasayfaFragment2"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingAnasayfaFragment"
@@ -39,19 +35,12 @@
         <action
             android:id="@+id/shoppingEkleGecis"
             app:destination="@id/shoppingEkleFragment2" />
-        <argument
-            android:name="Sekme"
-            app:argType="com.serkanyilmaz.finaldemo.data.entity.Sekmeler" />
     </fragment>
     <fragment
         android:id="@+id/rommateAnasayfaFragment"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.RommateAnasayfaFragment"
         android:label="fragment_rommate_anasayfa"
-        tools:layout="@layout/fragment_rommate_anasayfa" >
-        <argument
-            android:name="Sekme"
-            app:argType="com.serkanyilmaz.finaldemo.data.entity.Sekmeler" />
-    </fragment>
+        tools:layout="@layout/fragment_rommate_anasayfa" />
     <fragment
         android:id="@+id/shoppingDetayFragment2"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingDetayFragment"

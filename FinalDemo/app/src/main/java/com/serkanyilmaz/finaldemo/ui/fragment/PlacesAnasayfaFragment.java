@@ -19,6 +19,7 @@ public class PlacesAnasayfaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentPlacesAnasayfaBinding.inflate(inflater, container, false);
+        binding.toolbarPlacesAnasayfa.setTitle("Places");
 
 
         return binding.getRoot();

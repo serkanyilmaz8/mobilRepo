@@ -19,6 +19,8 @@ public class RommateAnasayfaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentRommateAnasayfaBinding.inflate(inflater, container, false);
+        binding.toolbarRommateAnasayfa.setTitle("Roommate");
+
 
 
         return binding.getRoot();
